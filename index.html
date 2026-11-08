@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="design.css?v=2">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="design.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="#aboutc">About</a>
+                    <a href="#educationc">Education</a>
+                    <a href="#skillsc">Skills</a>
+                    <a href="#projectsc">Projects</a>
+                    <a href="#contactc">Contact</a>
+                </div>
+                <button id="theme-toggle">🌓</button>
+            </div>
+        </nav>
+        <header class="hero-section">
+            <div class="welcome-bar">
+                <span id="guest"></span>
+            </div>
+
+            <div class="hero-container">
+                <div class="hero-text-col">
+                    <h1 id="name">Vince Jaliel Z. Balaman</h1>
+                    <p class="tagline">Information Technology Student</p>
+                    <p class="address">Cagayan de Oro City, Philippines</p>
+                    
+                    </div>
+
+                <div class="hero-photo-col">
+                    <div class="profile-photo-wrapper">
+                        <img src="assets/me.jpg" alt="Vince Balaman" class="profile-photo">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="summary-section" id="aboutc">
+            <h2 class="section-title">INTRODUCTION</h2>
+            <p>My name is Vince Jaliel Z. Balaman, an Information Technology student at the 
+                University of Science and Technology of Southern Philippines (USTP). 
+                I am passionate in learning about cybersecurity, data management, and software 
+                engineering. My academic journey so far has equipped me with the skills to build 
+                full-stack applications and design complex database architectures with assistance
+                from my professors and peers as well as external resources and from our courses. I am 
+                also technically proficient in networking (CCNA) and modern software stacks, 
+                with a proven track record of collaborating on AI-integrated accessibility projects, 
+                web based hospital management systems, and some mobile application development on the side.</p>
+        </div>
+        <section class="education-section" id="educationc">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="education-item">
+                <div class="edu-header">
+                    <h3>BS in Information Technology</h3>
+                    <span class="edu-date">Expected 2028</span>
+                </div>
+                <p class="school-name">University of Science and Technology of Southern Philippines (USTP)</p>
+                <ul class="coursework">
+                    <li>Relevant Coursework: Technopreneurship, Advanced Database Management, Network Security</li>
+                </ul>
+            </div>
+
+            <div class="expandable-wrapper">
+                <button class="more-btn" id="toggle-certs">
+                    <span>View Certifications & Affiliations</span>
+                    <i class="arrow-icon">▼</i>
+                </button>
+                
+                <div class="certs-content">
+                    <div class="cert-card">
+                        <ul>
+                            <li>Cisco Certified Network Associate (CCNA) – Coursework/Training</li>
+                            <li>Technopreneurship Program Participant – USTP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="skills-section" id="skillsc">
+            <h2 class="section-title">Technical Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <button class="skill-header" id="proglang">
+                        <span>Programming Languages</span>
+                        <span class="plus-icon">+</span>
+                    </button>
+                    <div class="skill-pills" id="proglangc">
+                        <span>Python</span> <span>Java</span> <span>C</span> 
+                        <span>C++</span> <span>JavaScript</span> <span>PHP</span> <span>SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <button class="skill-header" id="frameworksb">
+                        <span>Web Development & Frameworks</span>
+                        <span class="plus-icon">+</span>
+                    </button>
+                    <div class="skill-pills" id="frameworksc">
+                        <span>Node.js</span> <span>Laravel</span> <span>HTML5</span> 
+                        <span>CSS3</span> <span>Express.js</span>
+                        <span>React</span> <span>Tauri</span> <span>Expo</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <button class="skill-header" id="datab">
+                        <span>Database Management</span>
+                        <span class="plus-icon">+</span>
+                    </button>
+                    <div class="skill-pills" id="dbc">
+                        <span>PostgreSQL</span> <span>MySQL</span> <span>Relational Algebra</span> 
+                        <span>Normalization</span> <span>Query Optimization</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <button class="skill-header" id="networkingb">
+                        <span>Networking</span>
+                        <span class="plus-icon">+</span>
+                    </button>
+                    <div class="skill-pills" id="networkingc">
+                        <span>Cisco Certified Network Associate (CCNA)</span> <span>Network Configuration</span> <span>Security Protocols</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="projects" id="projectsc">
+            <h2 class="section-title">TECHNICAL PROJECTS</h2>
+            <label for="project-filter">Filter Projects by Tech:</label>
+            <select id="project-filter">
+                <option value="all">All Projects</option>
+                <option value="postgresql">PostgreSQL</option>
+                <option value="laravel">Laravel</option>
+                <option value="ai">AI / Python</option>
+                <option value="expo">Expo</option>
+            </select>
+
+            <div id="project-list">
+                <div class="project-item" data-tech="postgresql">
+                    <h4>Well Meadows Hospital Registry | Lead Developer</h4>
+                    <ul>
+                        <li>Engineered a full-stack hospital record management system using Node.js and PostgreSQL.</li>
+                        <li>Designed a decoupled directory structure to ensure professional-grade scalability and maintainability.</li>
+                        <li>Implemented full CRUD functionality (Create, Read, Update, Delete) for managing patient, staff, and medical records.</li>
+                    </ul>
+                </div>
+                <div class="project-item" data-tech="ai">
+                    <h4>NovaGazeAI | AI Integration Collaborator</h4>
+                    <ul>
+                        <li>Developed project logic for an accessibility application integrating Amazon Nova AI with eye-tracking technology.</li>
+                        <li>Implemented MediaPipe for visual tracking and calculated EAR (Eye Aspect Ratio) for blink detection to assist users with limited mobility.</li>
+                        <li>Collaborated on the integration of AI-driven responses to improve user interface convenience.</li>
+                    </ul>
+                </div>
+                <div class="project-item" data-tech="laravel">
+                    <h4>NutriCloud | Project Lead</h4>
+                    <ul>
+                        <li>Developed a patient dietary tracking system for healthcare providers using the Laravel framework.</li>
+                        <li>Created high-fidelity UI mockups in Figma and architected the backend database to handle sensitive medical data.</li>
+                    </ul>
+                </div>
+                <div class="project-item" data-tech="expo">
+                    <h4>Motor Rental Application | Project Lead & Lead Developer</h4>
+                    <ul>
+                        <li>Developed a motorcycle rental mobile application using the Expo framework.</li>
+                        <li>Set up the development environment and implemented core features including user authentication and vehicle listing.</li>
+                        <li>Set up the routing, authentication, and database connections as well as primary user interfaces and components.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact" id="contactc">
+            <h2 class="section-title">CONTACT</h2>
+            <div class="contact-info-grid">
+                <div class="info-item">
+                    <strong>Email</strong>
+                    <p>balaman.vincejaliel@gmail.com</p>
+                </div>
+                <div class="info-item">
+                    <strong>Number</strong>
+                    <p>09525226430</p>
+                </div>
+                <div class="info-item">
+                    <strong>GitHub</strong>
+                    <p><a href="https://github.com/vincebalaman" target="_blank">github.com/vincebalaman</a></p>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
